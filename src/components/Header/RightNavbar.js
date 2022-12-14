@@ -1,9 +1,13 @@
 import { Heading, HStack, Image, Text, VStack } from '@chakra-ui/react'
-import React from 'react'
+import React, { useState } from 'react'
 import { BsThreeDotsVertical } from 'react-icons/bs'
 import { RxMagnifyingGlass } from 'react-icons/rx'
+import RightMenuBox from '../MenuBox/RightMenuBox'
 
 const RightNavbar = () => {
+    // for toggling the view of menu box
+  const [isOpened, setIsOpened] = useState(false);
+  
   return (
     <HStack
       w="full"
@@ -12,6 +16,7 @@ const RightNavbar = () => {
       bg="#28373f"
       color="#AEBAC1"
       justifyContent="space-between"
+      position="relative"
     >
         {/* for showing the user profile image */}
       <HStack gap="2">
@@ -26,8 +31,9 @@ const RightNavbar = () => {
 
       {/* for adding the search and menu icons */}
       <HStack gap="20px">
-        <RxMagnifyingGlass fontSize="25px" />
-        <BsThreeDotsVertical fontSize="23px" />
+        <RxMagnifyingGlass fontSize="25px" cursor="pointer"/>
+        <BsThreeDotsVertical fontSize="23px" cursor="pointer" onClick={() => setIsOpened(!isOpened)} />
+        {isOpened?<RightMenuBox/>:()=>setIsOpened(isOpened)}
       </HStack>
       
     </HStack>

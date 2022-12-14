@@ -1,10 +1,22 @@
 import { Heading, HStack, Image, Text, VStack } from '@chakra-ui/react';
 import React from 'react';
-import {Fade} from '@chakra-ui/react'
+import { Fade } from '@chakra-ui/react';
 
 const UserCard = () => {
   return (
-    <HStack px="4" py="2" gap="2" mr="2" w="full" cursor="pointer" _hover={{bg:"#33454f",border:"none",transition:"400ms ease-in-out"}}>
+    <HStack
+      px="4"
+      py="2"
+      gap="2"
+      mr="2"
+      w="full"
+      cursor="pointer"
+      _hover={{
+        bg: '#33454f',
+        border: 'none',
+        transition: '400ms ease-in-out',
+      }}
+    >
       {/* adding the user profile picture */}
       <Image src="cutePanda.jpg" w="14" borderRadius="50%" />
 

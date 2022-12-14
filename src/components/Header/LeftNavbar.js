@@ -3,8 +3,6 @@ import { HStack, Image, Input, VStack } from '@chakra-ui/react';
 import { FaUsers } from 'react-icons/fa';
 import { MdDonutLarge, MdMessage } from 'react-icons/md';
 import { BsThreeDotsVertical } from 'react-icons/bs';
-import { RxMagnifyingGlass } from 'react-icons/rx';
-import { BiFilter } from 'react-icons/bi';
 import SearchBar from './SearchBar';
 
 const LeftNavbar = () => {

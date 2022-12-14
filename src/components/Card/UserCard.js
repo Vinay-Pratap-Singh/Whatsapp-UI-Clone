@@ -1,7 +1,7 @@
 import { Heading, HStack, Image, Text, VStack } from '@chakra-ui/react';
 import React from 'react';
 
-const Card = () => {
+const UserCard = () => {
   return (
     <HStack px="4" gap="2" mr="2" w="full">
       {/* adding the user profile picture */}
@@ -30,4 +30,4 @@ const Card = () => {
   );
 };
 
-export default Card;
+export default UserCard;

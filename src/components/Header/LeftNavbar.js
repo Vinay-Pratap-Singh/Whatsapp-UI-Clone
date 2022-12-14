@@ -1,16 +1,17 @@
 import React from 'react';
-import { Container, HStack, Image } from '@chakra-ui/react';
+import { HStack, Image, Input, VStack } from '@chakra-ui/react';
 import { FaUsers } from 'react-icons/fa';
 import { MdDonutLarge, MdMessage } from 'react-icons/md';
 import { BsThreeDotsVertical } from 'react-icons/bs';
+import { RxMagnifyingGlass } from 'react-icons/rx';
+import { BiFilter } from 'react-icons/bi';
+import SearchBar from './SearchBar';
 
 const LeftNavbar = () => {
   return (
-    <>
+    <VStack position="sticky" top="0">
       {/* designing the top header for left navigation menu */}
       <HStack
-        bg="#202C33"
-        color="#AEBAC1"
         justifyContent="space-between"
         w="28rem"
         px="5"
@@ -27,7 +28,10 @@ const LeftNavbar = () => {
           <BsThreeDotsVertical fontSize="23px" />
         </HStack>
       </HStack>
-    </>
+
+      {/* search bar component */}
+      <SearchBar/>
+    </VStack>
   );
 };
 

@@ -1,11 +1,15 @@
 import React from 'react';
-import { HStack, Image, Input, VStack } from '@chakra-ui/react';
+import { HStack, Image, useDisclosure, VStack } from '@chakra-ui/react';
 import { FaUsers } from 'react-icons/fa';
 import { MdDonutLarge, MdMessage } from 'react-icons/md';
 import { BsThreeDotsVertical } from 'react-icons/bs';
 import SearchBar from './SearchBar';
+import ProfileDetailDrawer from '../Drawer/ProfileDetailDrawer';
 
 const LeftNavbar = () => {
+  // for closing, opening of drawer
+  const { isOpen, onOpen, onClose } = useDisclosure();
+
   return (
     <VStack position="sticky" top="0">
       {/* designing the top header for left navigation menu */}
@@ -17,7 +21,16 @@ const LeftNavbar = () => {
         bg="#28373f"
       >
         {/* for showing the user profile image */}
-        <Image src="cutePanda.jpg" w="10" borderRadius="50%" />
+        <Image
+          onClick={onOpen}
+          src="cutePanda.jpg"
+          w="10"
+          borderRadius="50%"
+          cursor="pointer"
+        />
+
+        {/* drawer component */}
+        <ProfileDetailDrawer onClose={onClose} isOpen={isOpen} />
 
         {/* for displaying the other user options */}
         <HStack spacing="30px">

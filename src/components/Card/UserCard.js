@@ -12,7 +12,7 @@ const UserCard = () => {
         justifyContent="space-between"
         w="full"
         py="2"
-        borderBottom="1px solid #AEBAC1"
+        borderBottom="1px solid #33454f"
       >
         <VStack spacing="0" alignItems="flex-start">
           <Heading fontSize="20px" fontWeight="600" color="white">

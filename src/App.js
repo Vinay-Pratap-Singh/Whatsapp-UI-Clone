@@ -2,11 +2,11 @@ import React from 'react';
 import { HStack, VStack } from '@chakra-ui/react';
 import LeftNavbar from './components/Header/LeftNavbar';
 import UserCard from './components/Card/UserCard';
-import RightNavbar from './components/Header/RightNavbar';
 import DefaultChatCard from './components/Card/DefaultChatCard';
+import RightSection from './components/RightSection/RightSection';
 
 function App() {
-  const data = false;
+  const data = true;
   return (
     <>
       <HStack overflow="hidden" spacing="0">
@@ -16,9 +16,8 @@ function App() {
           bg="#202C33"
           color="#AEBAC1"
           overflow="hidden"
-          position="relative"
           h="100vh"
-          borderRight="2px solid #AEBAC1"
+          borderRight="2px solid #33454f"
         >
           {/* getting the left side navbar component */}
           <LeftNavbar />
@@ -32,7 +31,7 @@ function App() {
             sx={{
               '::-webkit-scrollbar': {
                 width: '10px',
-                background: '#28373f',
+                background: '#202C33',
               },
               '::-webkit-scrollbar-thumb': {
                 backgroundColor: `#1b252b`,
@@ -54,8 +53,8 @@ function App() {
         </VStack>
 
         {/* right section for the chat option and displaying the previous messages */}
-        <VStack w="65%" h="100vh" alignSelf="baseline">
-          {!data?<DefaultChatCard/>:<RightNavbar/>}
+        <VStack w="65%" h="100vh" overflow="hidden" position="relative" spacing="0">
+          {!data ? <DefaultChatCard /> : <RightSection/>}
         </VStack>
       </HStack>
     </>

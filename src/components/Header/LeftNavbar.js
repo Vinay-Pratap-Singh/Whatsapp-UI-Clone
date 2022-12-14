@@ -16,6 +16,7 @@ const LeftNavbar = () => {
         w="28rem"
         px="5"
         py="3"
+        bg="#28373f"
       >
         {/* for showing the user profile image */}
         <Image src="cutePanda.jpg" w="10" borderRadius="50%" />
@@ -30,7 +31,7 @@ const LeftNavbar = () => {
       </HStack>
 
       {/* search bar component */}
-      <SearchBar/>
+      <SearchBar />
     </VStack>
   );
 };

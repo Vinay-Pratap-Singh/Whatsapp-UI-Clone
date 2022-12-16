@@ -10,11 +10,16 @@ import {
   Text,
   VStack,
 } from '@chakra-ui/react';
-import React from 'react';
+import React, { useContext, useEffect } from 'react';
 import { BsArrowLeft } from 'react-icons/bs';
 import { MdModeEdit } from 'react-icons/md';
+import { DataContext } from '../../App';
 
 const ProfileDetailDrawer = props => {
+  // getting the owner user data from the use context
+  const UserData = useContext(DataContext);
+  const ownerData = UserData.ownerDetails;
+
   return (
     <>
       <Drawer
@@ -48,7 +53,7 @@ const ProfileDetailDrawer = props => {
             }}
           >
             <VStack pt="8">
-              <Image src="cutePanda.jpg" w="52" borderRadius="50%" />
+              <Image src={ownerData.profilePicture} w="52" borderRadius="50%" />
 
               {/* profile details */}
               <VStack alignItems="flex-start" px="10" pt="6">
@@ -63,7 +68,7 @@ const ProfileDetailDrawer = props => {
                   fontSize="18px"
                   pb="6"
                 >
-                  <Text>Harvi</Text>
+                  <Text style={{textTransform:"capitalize"}}>{ownerData.name}</Text>
                   <MdModeEdit />
                 </HStack>
 
@@ -83,7 +88,7 @@ const ProfileDetailDrawer = props => {
                   fontSize="18px"
                   pb="6"
                 >
-                  <Text>Available</Text>
+                  <Text style={{textTransform:"capitalize"}}>{ownerData.about}</Text>
                   <MdModeEdit />
                 </HStack>
               </VStack>

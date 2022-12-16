@@ -1,0 +1,120 @@
+{
+  "ownerDetails": {
+    "name": "harvi",
+    "profilePicture": "cutePanda.jpg",
+    "about": "available"
+  },
+
+  "contacts": [
+    {
+      "profile": {
+        "name": "vinay",
+        "profilePicture": "cutePanda.jpg",
+        "lastSeen": "last seen today at 05:43 pm",
+        "lastSeenDay": "today"
+      },
+
+      "chat": [
+        {
+          "user": "contactUser",
+          "message": "hi",
+          "time": "05:50 am"
+        },
+
+        {
+          "user": "mainUser",
+          "message": "hello",
+          "time": "05:50 am"
+        }
+      ]
+    },
+
+    {
+      "profile": {
+        "name": "mahesh",
+        "profilePicture": "cutePanda.jpg",
+        "lastSeen": "last seen today at 02:43 am",
+        "lastSeenDay": "today"
+      },
+
+      "chat": [
+        {
+          "user": "contactUser",
+          "message": "hi",
+          "time": "05:50 am"
+        },
+
+        {
+          "user": "mainUser",
+          "message": "hello",
+          "time": "05:50 am"
+        },
+
+        {
+          "user": "contactUser",
+          "message": "college ana hai",
+          "time": "08:50 am"
+        },
+
+        {
+          "user": "mainUser",
+          "message": "thoda late hoga",
+          "time": "08:51 am"
+        },
+
+        {
+          "user": "contactUser",
+          "message": "thik hai",
+          "time": "08:53 am"
+        }
+      ]
+    },
+
+    {
+      "profile": {
+        "name": "prabir",
+        "profilePicture": "cutePanda.jpg",
+        "lastSeen": "last seen today at 11:43 am",
+        "lastSeenDay": "tommorow"
+      },
+
+      "chat": [
+        {
+          "user": "contactUser",
+          "message": "hi",
+          "time": "05:50 am"
+        },
+
+        {
+          "user": "mainUser",
+          "message": "hello",
+          "time": "05:50 am"
+        },
+
+        {
+          "user": "mainUser",
+          "message": "kya ho rha hai",
+          "time": "05:52 am"
+        },
+
+        {
+          "user": "mainUser",
+          "message": "aur sab badiya hai",
+          "time": "05:55 am"
+        },
+
+        {
+          "user": "mainUser",
+          "message": "file send kr do",
+          "time": "05:56 am"
+        },
+
+        {
+          "user": "contactUser",
+          "message": "thodi der me bhej dunga",
+          "time": "05:59 am"
+        }
+      ]
+    }
+  ]
+}

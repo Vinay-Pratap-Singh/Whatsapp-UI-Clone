@@ -18,7 +18,7 @@ const LeftNavbar = () => {
   const [isOpened, setIsOpened] = useState(false);
 
     // getting the owner user data from the use context
-    const UserData = useContext(DataContext);
+    const {UserData} = useContext(DataContext);
     const ownerData = UserData.ownerDetails;
 
   return (
@@ -36,6 +36,7 @@ const LeftNavbar = () => {
           onClick={onOpen}
           src={ownerData.profilePicture}
           w="10"
+          h="10"
           borderRadius="50%"
           cursor="pointer"
         />

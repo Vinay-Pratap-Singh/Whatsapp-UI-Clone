@@ -16,7 +16,7 @@ import { DataContext } from '../../App';
 
 const ProfileDetailDrawer = props => {
   // getting the owner user data from the use context
-  const UserData = useContext(DataContext);
+  const {UserData} = useContext(DataContext);
   const ownerData = UserData.ownerDetails;
 
   return (

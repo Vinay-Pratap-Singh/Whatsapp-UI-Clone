@@ -12,12 +12,12 @@ export const DataContext = createContext();
 
 function App() {
   // for opening the right section
-  const [isData, setIsData] = useState(false);
+  const [data, setContextData] = useState(null);
 
   return (
     <>
-      <DataContext.Provider value={UserData}>
-        <HStack overflow="hidden" spacing="0">
+      <DataContext.Provider value={{UserData, data, setContextData}}>
+        <HStack overflow="hidden" spacing="0" margin="auto" maxWidth="1440px">
           {/* for user details left section */}
           <LeftSection />
 
@@ -29,7 +29,7 @@ function App() {
             position="relative"
             spacing="0"
           >
-            {!isData ? <DefaultChatCard /> : <RightSection />}
+            {!data ? <DefaultChatCard /> : <RightSection />}
           </VStack>
         </HStack>
       </DataContext.Provider>

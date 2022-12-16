@@ -1,13 +1,9 @@
 import { VStack } from '@chakra-ui/react';
-import React, { useContext } from 'react';
-import { DataContext } from '../../App';
+import React from 'react';
 import UserCard from '../Card/UserCard';
 import LeftNavbar from '../Header/LeftNavbar';
 
 const LeftSection = () => {
-  // getting the owner user data from the use context
-  const UserData = useContext(DataContext);
-  const contacts = UserData.contacts;
 
   return (
     <>
@@ -38,18 +34,7 @@ const LeftSection = () => {
             },
           }}
         >
-          {/* rendering all the cards using the map */}
-          {contacts.map((element, index) => {
-            return (
-              <UserCard
-                key={index}
-                src={element.profile.profilePicture}
-                name={element.profile.name}
-                lastMessage={element.chat[element.chat.length - 1].message}
-                lastSeenDay={element.profile.lastSeenDay}
-              />
-            );
-          })}
+          <UserCard/>
         </VStack>
       </VStack>
     </>

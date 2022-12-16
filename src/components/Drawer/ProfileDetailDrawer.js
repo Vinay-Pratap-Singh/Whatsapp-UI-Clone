@@ -1,7 +1,6 @@
 import {
   Drawer,
   DrawerBody,
-  DrawerCloseButton,
   DrawerContent,
   DrawerHeader,
   DrawerOverlay,
@@ -10,7 +9,7 @@ import {
   Text,
   VStack,
 } from '@chakra-ui/react';
-import React, { useContext, useEffect } from 'react';
+import React, { useContext } from 'react';
 import { BsArrowLeft } from 'react-icons/bs';
 import { MdModeEdit } from 'react-icons/md';
 import { DataContext } from '../../App';

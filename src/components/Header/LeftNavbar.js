@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import { HStack, Image, useDisclosure, VStack } from '@chakra-ui/react';
 import { FaUsers } from 'react-icons/fa';
 import { MdDonutLarge, MdMessage } from 'react-icons/md';
@@ -6,6 +6,9 @@ import { BsThreeDotsVertical } from 'react-icons/bs';
 import SearchBar from './SearchBar';
 import ProfileDetailDrawer from '../Drawer/ProfileDetailDrawer';
 import LeftMenuBox from '../MenuBox/LeftMenuBox';
+import { DataContext } from '../../App';
+
+
 
 const LeftNavbar = () => {
   // for closing, opening of drawer
@@ -13,6 +16,10 @@ const LeftNavbar = () => {
 
   // for toggling the view of menu box
   const [isOpened, setIsOpened] = useState(false);
+
+    // getting the owner user data from the use context
+    const UserData = useContext(DataContext);
+    const ownerData = UserData.ownerDetails;
 
   return (
     <VStack position="sticky" top="0">
@@ -27,7 +34,7 @@ const LeftNavbar = () => {
         {/* for showing the user profile image */}
         <Image
           onClick={onOpen}
-          src="cutePanda.jpg"
+          src={ownerData.profilePicture}
           w="10"
           borderRadius="50%"
           cursor="pointer"

@@ -1,8 +1,7 @@
 import { Heading, HStack, Image, Text, VStack } from '@chakra-ui/react';
 import React from 'react';
-import { Fade } from '@chakra-ui/react';
 
-const UserCard = () => {
+const UserCard = (props) => {
   return (
     <HStack
       px="4"
@@ -18,7 +17,7 @@ const UserCard = () => {
       }}
     >
       {/* adding the user profile picture */}
-      <Image src="cutePanda.jpg" w="14" borderRadius="50%" />
+      <Image src={props.src} w="14" borderRadius="50%" />
 
       {/* left side card details */}
       <HStack
@@ -28,15 +27,15 @@ const UserCard = () => {
         borderBottom="1px solid #33454f"
       >
         <VStack spacing="0" alignItems="flex-start">
-          <Heading fontSize="18px" fontWeight="400" color="white">
-            Vinay
+          <Heading fontSize="18px" fontWeight="400" color="white" style={{textTransform:"capitalize"}}>
+            {props.name}
           </Heading>
-          <Text fontSize="14px">Good Morning</Text>
+          <Text fontSize="14px">{props.lastMessage}</Text>
         </VStack>
 
         {/* user online last day */}
-        <Text alignSelf="flex-start" fontSize="12px">
-          Today
+        <Text alignSelf="flex-start" fontSize="12px" style={{textTransform:"capitalize"}}>
+          {props.lastSeenDay}
         </Text>
       </HStack>
     </HStack>
